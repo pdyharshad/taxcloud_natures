@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 Sodexis
+    License OPL-1 (See LICENSE file for full copyright and licensing details). -->
+<odoo>
+
+    <record id="res_partner_industry_view_tree_inherit" model="ir.ui.view">
+        <field name="name">Industry.inherit</field>
+        <field name="model">res.partner.industry</field>
+        <field name="inherit_id" ref="base.res_partner_industry_view_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='full_name']" position="after">
+                <field name="is_taxcloud" readonly="1" />
+                <field name="taxcloud_business_type" readonly="1" />
+                <field name="code" column_invisible="True" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

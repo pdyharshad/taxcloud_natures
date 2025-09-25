@@ -1,0 +1,204 @@
+<html>
+
+<body class="c13 c15 doc-content">
+    <center class="c20"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 100%; max-width: 850.00px; height: auto"><img
+                alt="" src="images/image2.jpg"
+                style="width: 100%; height: auto; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></center><br>
+    <p class="c12 c20"><span class="c18 c6 c19"></span></p>
+    <h2 class="c21 title" id="h.j1ee38mtb2x5"><span style="color:#714b67;" class="c6 c31">Account TaxCloud - Sale (loyalty) - Delivery</span><br>
+    </h2>
+    <h5 class="c4" id="h.gjdgxs"><span class="c18 c6 c19">Description</span></h5>
+    <p class="c10"><span class="c3">This module integrates Odoo with TaxCloud, enabling the automatic computation of
+            sales tax on invoices </span><span class="c11">within the Odoo platform. From Odoo 17, new installations are
+            prohibited, and from Odoo 18, the TaxCloud module(s) won&rsquo;t exist at all. This module </span><span
+            class="c11">allows it to be install</span><span class="c2">ed as if it were officially supported by
+            TaxCloud. </span></p>
+    <p class="c10 c12"><span class="c2 c13"></span></p>
+    <p class="c10"><span class="c11">This module is configured to manage discounts in TaxCloud computations with
+            delivery and follows the same logic as </span><span class="c1">&quot;</span><b class="c3 c6">Account
+            TaxCloud - Sale (coupon)</b><span class="c1">&quot;</span><span class="c11">. There is an added option
+            for a discount (free shipping) on deliveries. With </span><span class="c3">Sale coupon delivery</span><span
+            class="c2">, the discount computation does not apply on delivery lines. It is compatible with multi-company
+            environments.</span></p><a id="kix.9m04o2bq163a"></a>
+    <h5 class="c4" id="h.wh6y4fzeswla"><span class="c18 c6 c19">Module Installation</span></h5>
+    <ul class="c5 lst-kix_6hpya5vk0sdq-0 start">
+        <li class="c0 li-bullet-0"><span class="c3">Users must download all the official TaxCloud modules listed below
+                from the Odoo</span><span class="c3 c6">&nbsp;</span><span class="c3">Apps Store</span><span
+                class="c3 c6">&nbsp;</span><span class="c3">before proceeding with the installation process, even if
+                they don&rsquo;t use the related Odoo TaxCloud modules. This ensures they get all the TaxCloud features
+                and proper data transmission. If they use </span><b class="c3 c6">&ldquo;Deploy on Odoo.sh&rdquo;
+            </b><span class="c2 c13">in the Apps Store, they must deploy all the modules listed below.</span></li>
+    <p class="c28 c12"><span class="c2 c13"></span></p>
+    <ul class="c5 lst-kix_6hpya5vk0sdq-1 start">
+        <li class="c4 li-bullet-0"><span class="c24 c29"><a class="c19"
+                href="https://www.google.com/url?q=https://apps.odoo.com/apps/modules/17.0/account_taxcloud_tc/&amp;sa=D&amp;source=editors&amp;ust=1717162862902896&amp;usg=AOvVaw1lBGfjA8V-cPoVKrCQcLKw">Account
+                TaxCloud</a></span></li>
+        <li class="c4 li-bullet-0"><span class="c7"><a class="c19"
+                        href="https://www.google.com/url?q=https://apps.odoo.com/apps/modules/17.0/sale_account_taxcloud_tc/&amp;sa=D&amp;source=editors&amp;ust=1717162862903458&amp;usg=AOvVaw0rX_8rFl9h4CWDNv3iD9UQ">Account
+                        TaxCloud - Sale</a></span></li>
+        <li class="c4 li-bullet-0"><span class="c7"><a class="c19"
+                        href="https://www.google.com/url?q=https://apps.odoo.com/apps/modules/17.0/sale_loyalty_taxcloud_tc/&amp;sa=D&amp;source=editors&amp;ust=1717162862903966&amp;usg=AOvVaw0T4j2PGVHU4K35sl1cGiQF">Account
+                        Taxcloud - Sale (loyalty)</a></span></li>
+        <li class="c4 li-bullet-0"><span class="c7"><a class="c19"
+                        href="https://www.google.com/url?q=https://apps.odoo.com/apps/modules/17.0/website_sale_account_taxcloud_tc/&amp;sa=D&amp;source=editors&amp;ust=1717162862904403&amp;usg=AOvVaw2ARnlReYDo7urR70VgOXnL">Account
+                        TaxCloud - Ecommerce</a></span></li>
+        <li class="c4 li-bullet-0"><span class="c7"><a class="c19"
+                        href="https://www.google.com/url?q=https://apps.odoo.com/apps/modules/17.0/sale_subscription_taxcloud_tc/&amp;sa=D&amp;source=editors&amp;ust=1717162862904800&amp;usg=AOvVaw3cdISDPPSILqS43HjTngzA">TaxCloud
+                        and Subscriptions</a></span></li>
+        <li class="c4 li-bullet-0"><span class="c7"><a class="c19"
+                        href="https://www.google.com/url?q=https://apps.odoo.com/apps/modules/17.0/sale_amazon_taxcloud_tc/&amp;sa=D&amp;source=editors&amp;ust=1717162862905157&amp;usg=AOvVaw0uwjo_fgGihubNz0JBfvPL">Amazon/TaxCloud
+                        Bridge</a></span></li>
+    </ul>
+</ul>
+    <p class="c8"><span class="c2 c13"></span></p>
+    <ul class="c5 lst-kix_6hpya5vk0sdq-0">
+        <li class="c0 li-bullet-0"><span class="c3">For example, suppose users have not installed the Subscription app
+                but have installed the Sales app. In that case, they are still recommended to download all the official
+                TaxCloud modules before installing the </span><b class="c3 c6">&ldquo;Account
+                TaxCloud&rdquo;</b><span class="c3">&nbsp;module. The </span><b class="c3 c6">&ldquo;Account
+                TaxCloud - Sale&rdquo;</b><span class="c3">&nbsp;modules are installed based on the installed modules
+                list. In the future, installing the Subscription app will automatically install the needed </span><b
+                class="c3 c6">&ldquo;TaxCloud and Subscription&rdquo;</b><span class="c2 c13">&nbsp;module. This
+                ensures they do not miss any of the TaxCloud features.</span></li>
+    </ul>
+    <ul class="c4 lst-kix_nfmzrkthkxo6-0">
+        <li class="c12 c18 c19 li-bullet-0"><b class="c15 c0">Users did not use the Odoo TaxCloud Modules:</b>
+        </li>
+    <ul class="c4 lst-kix_nfmzrkthkxo6-1 start">
+        <li class="c12 c16 c19 li-bullet-0"><span class="c6 c11">If users are not currently using the Odoo module, they
+                can install this module by simply clicking the </span><b
+                class="c0">&ldquo;Activate&rdquo;</b><span class="c5 c6">&nbsp;button and following the configuration
+                steps below.</span></li>
+    </ul>
+</ul>
+    <p class="c12 c28"><span class="c2 c13"></span></p>
+    <ul class="c13 lst-kix_pg2f07diqcm8-0">
+        <li class="c3 c11 li-bullet-0"><b class="c7 c0 c4">Using Odoo TaxCloud Modules:</b></li>
+    
+    <ul class="c13 lst-kix_pg2f07diqcm8-1 start">
+        <li class="c3 c19 c18 li-bullet-0"><b class="c7 c0 c4">Switching from the Odoo TaxCloud module to our
+                connector in odoo V17</b></li>
+    
+        <ul class="c13 lst-kix_pg2f07diqcm8-2 start">
+            <li class="c3 c9 li-bullet-0"><span class="c0">If users are currently using the Odoo TaxCloud module, then they
+                </span><b class="c0 c4">should not uninstall</b><span class="c0">&nbsp;the current module before
+                    installing this module; otherwise, they will lose all of their data. This module will take care of the
+                </span><b class="c0 c4">configuration &amp;</b><span class="c0">&nbsp;</span><b
+                    class="c0 c4">data</b><span class="c0">&nbsp;</span><b class="c0 c4">transmission from the
+                    existing module and automatic uninstallation of the Odoo TaxCloud module</b><span
+                    class="c2 c0">&nbsp;once installed. It is not necessary to reinstall the Odoo TaxCloud module.</span>
+            </li>
+        </ul>
+    </ul>
+    <ul class="c13 lst-kix_pg2f07diqcm8-1">
+        <li class="c3 c19 c18 li-bullet-0"><b class="c7 c0 c4">Migrating from Odoo 17 to Odoo 18 or from Earlier
+                Versions to Odoo 18</b></li>
+    
+        <ul class="c13 lst-kix_pg2f07diqcm8-2 start">
+            <li class="c9 c23 li-bullet-0"><b class="c4">Migrating from Odoo 17 to Odoo 18</b></li>
+        
+        <ul class="c13 lst-kix_pg2f07diqcm8-3 start">
+            <li class="c3 c19 c21 li-bullet-0"><span class="c2 c0">First, switch to the official connector in Odoo 17 to
+                    prevent data loss. Then, proceed with the migration to Odoo 18 using our connector.</span></li>
+        </ul>
+        </ul>
+        <ul class="c13 lst-kix_pg2f07diqcm8-2">
+            <li class="c3 c9 li-bullet-0"><b class="c7 c8 c4 c26">Migrating from earlier versions to Odoo 18</b></li>
+        
+        <ul class="c13 lst-kix_pg2f07diqcm8-3 start">
+            <li class="c3 c19 c21 li-bullet-0"><span class="c2 c0">First, migrate to Odoo V17 using our official connector.
+                    Then migrate to Odoo 18 to ensure all data is retained.</span></li>
+            <li class="c3 c19 c21 li-bullet-0"><span class="c2 c0">Alternatively, the module can be installed directly in
+                    Odoo 18 as a fresh installation and configured from scratch.</span></li>
+        </ul>
+        </ul>
+    </ul>
+
+</ul>
+    <p class="c28 c12"><span class="c2 c13"></span></p>
+    <p class="c28"><span class="c11">For any technical queries or support, contact us at &#128231;</span><span
+            class="c26 c11"><a class="c9" href="mailto:taxcloud@sodexis.com">taxcloud@sodexis.com</a></span><span
+            class="c11">&nbsp;or visit the website at &#127760;</span><span class="c26 c11"><a class="c9"
+                href="https://www.google.com/url?q=http://sodexis.com/taxcloud&amp;sa=D&amp;source=editors&amp;ust=1741270361033891&amp;usg=AOvVaw2GvhD6FHHxpS6DEPtRGMfK">sodexis.com/taxcloud</a></span><span
+            class="c11">. Free support for the installation to the first few customers will be provided.</span></p>
+    <h5 class="c4" id="h.ja6aganf26km"><span class="c18 c6 c19">Configuration</span></h5>
+    <p class="c10"><span class="c11">The technical and functional configurations are detailed in the &ldquo;Account
+            TaxCloud&rdquo; document. Please refer to the documentation for any questions regarding TaxCloud. </span>
+    </p>
+    <h5 class="c4" id="h.y2kitiu20h73"><span class="c18 c6 c19">Functionality</span></h5>
+    <p class="c10"><span class="c11">Navigate to the </span><b class="c1">Sales</b><span class="c2">&nbsp;app and
+            create a sales order.</span></p>
+    <p class="c10 c12"><span class="c2"></span></p>
+    <p class="c10"><span class="c11">Click </span><b class="c1">&ldquo;Update Shipping Cost&rdquo;</b><span
+            class="c2">&nbsp;to add the shipping to the sale order line.</span></p>
+    <p class="c10 c12"><span class="c2"></span></p>
+    <p class="c10"><span class="c2">When the coupon code is not applied, it computes taxes for both the product and the
+            shipping as shown below.</span></p>
+    <p class="c10 c12"><span class="c2"></span></p>
+    <p class="c10"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 100%; max-width: 1000px; height: auto;"><img
+                alt="" src="images/image6.png"
+                style="width: 100%; height: auto; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c10 c12"><span class="c2"></span></p>
+    <p class="c10"><span class="c11">When the coupon code</span><span class="c1">&nbsp;</span><span
+            class="c11">is</span><span class="c1">&nbsp;</span><span class="c2">applied, the module computes tax only
+            for the product, excluding the shipping cost.</span></p>
+    <p class="c10 c12"><span class="c2"></span></p>
+    <p class="c10"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 100%; max-width: 1000px; height: auto;"><img
+                alt="" src="images/image5.png"
+                style="width: 100%; height: auto; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c10 c12"><span class="c2"></span></p>
+    <p class="c10"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 100%; max-width: 1000px; height: auto;"><img
+                alt="" src="images/image1.png"
+                style="width: 100%; height: auto; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c10 c12"><span class="c2"></span></p>
+    <p class="c10"><span class="c2">It can also be seen that the computed tax for the product is in the invoice.</span>
+    </p>
+    <p class="c10 c12"><span class="c2"></span></p>
+    <p class="c10"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 100%; max-width: 1000px; height: auto;"><img
+                alt="" src="images/image4.png"
+                style="width: 100%; height: auto; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c10 c12"><span class="c2"></span></p>
+    <p class="c10"><span class="c11">On the TaxCloud website, under the </span><b
+            class="c1">Transactions,</b><span class="c11">&nbsp;select </span><b class="c1">Reports,</b><span
+            class="c2">&nbsp;which shows the recent transactions in Odoo.</span></p>
+    <p class="c20 c12"><span class="c2"></span></p>
+    <p class="c10"><span class="c11">The status of the sales order can be seen as</span><b
+            class="c1">&nbsp;&ldquo;Lookup&rdquo;</b><span class="c11">&nbsp;and the Invoice as </span><b
+            class="c1">&ldquo;Captured&rdquo;</b><span class="c2">&nbsp;with the computed taxes as shown
+            below.</span></p>
+    <p class="c10 c12"><span class="c2"></span></p>
+    <p class="c10"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 100%; max-width: 1000px; height: auto;"><img
+                alt="" src="images/image3.png"
+                style="width: 100%; height: auto; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c10 c12"><span class="c2 c16"></span></p>
+    <p class="c10"><b class="c3 c6">Document Version:</b><span class="c2 c13">&nbsp;1.0</span></p>
+    <p class="c10 c12"><span class="c2 c16"></span></p>
+    <h2 class="c13 c24" id="h.3znysh7"><span class="c18 c6 c19">Credits</span></h2>
+    <h5 class="c13 c25" id="h.2et92p0"><span class="c18 c6 c32">Contributors</span></h5>
+    <p class="c7"><span class="c2">For additional information or inquiries regarding TaxCloud, feel free to reach out to
+            us at</span></p>
+    <p class="c7"><span class="c11">Sodexis &lt;&#128231;</span><span class="c26 c11"><a class="c9"
+                href="mailto:taxcloud@sodexis.com">taxcloud@sodexis.com</a></span><span class="c11">&gt; or visit our
+            website at &lt;&#127760;</span><span class="c26 c11"><a class="c9"
+                href="https://www.google.com/url?q=http://sodexis.com/taxcloud&amp;sa=D&amp;source=editors&amp;ust=1741270361035970&amp;usg=AOvVaw2QcsMZKpAVhJ0tC_e0HMo_">sodexis.com/taxcloud</a></span><span
+            class="c2">&gt;</span></p>
+    <p class="c7 c12"><span class="c2"></span></p>
+    <p class="c7"><span class="c2">This module is maintained by Sodexis.</span></p>
+    <p class="c10 c12"><span class="c2 c16"></span></p>
+    <p class="c10 c12"><span class="c2 c16"></span></p>
+    <p class="c10 c12"><span class="c2 c16"></span></p>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 Sodexis
+    License OPL-1 (See LICENSE file for full copyright and licensing details). -->
+<odoo>
+    <record id="sale_order_view_form_inherit" model="ir.ui.view">
+        <field name="name">sale.order.view.form.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="after">
+                <div
+                    class="alert alert-info mb-0"
+                    role="alert"
+                    invisible="not taxcloud_exemption_id or is_dont_apply_exemption or is_exemption_not_applied"
+                >
+                    Exemption is applied
+                </div>
+                <div
+                    class="alert alert-info mb-0"
+                    role="alert"
+                    invisible="not is_exemption_not_applied"
+                >
+                    Exemption is not Applied
+                </div>
+            </xpath>
+            <xpath
+                expr="//page[@name='other_information']/group[1]/group[@name='sale_info']/div[1]"
+                position="after"
+            >
+                <field name="is_taxcloud" invisible="1" />
+                <field
+                    name="taxcloud_exemption_id"
+                    readonly="1"
+                    invisible="not is_taxcloud"
+                />
+                <field name="is_dont_apply_exemption" invisible="not is_taxcloud" />
+                <field name="is_exemption_not_applied" invisible="1" />
+            </xpath>
+        </field>
+    </record>
+
+    <menuitem
+        id="menu_sale_taxcloud_exemption"
+        name="Exemptions"
+        parent="sale.sale_order_menu"
+        sequence="41"
+        action="account_taxcloud_exemption_tc.action_taxcloud_exemption"
+    />
+
+</odoo>

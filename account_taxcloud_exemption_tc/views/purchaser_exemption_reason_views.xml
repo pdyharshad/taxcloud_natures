@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 Sodexis
+    License OPL-1 (See LICENSE file for full copyright and licensing details). -->
+<odoo>
+
+        <record id="purchaser_exemption_reason_tree_view" model="ir.ui.view">
+            <field name="name">Purchaser.Exemption.Reason.Tree</field>
+            <field name="model">purchaser.exemption.reason</field>
+            <field name="arch" type="xml">
+                <list create="0" edit="0" delete="0" duplicate="0">
+                    <field name="name" />
+                    <field name="other_reason" />
+                    <field name="code" column_invisible="True" />
+                </list>
+            </field>
+        </record>
+
+        <record id="purchaser_exemption_reason_form_view" model="ir.ui.view">
+            <field name="name">Purchaser.Exemption.Reason.Form</field>
+            <field name="model">purchaser.exemption.reason</field>
+            <field name="arch" type="xml">
+                <form create="0" edit="0" delete="0" duplicate="0">
+                    <sheet>
+                        <group col="4">
+                            <field name="name" />
+                            <field name="other_reason" invisible="code != 'Other'" />
+                            <field name="code" invisible="True" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="purchaser_exemption_reason_action" model="ir.actions.act_window">
+            <field name="name">Certificate Reasons</field>
+            <field name="res_model">purchaser.exemption.reason</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+</odoo>

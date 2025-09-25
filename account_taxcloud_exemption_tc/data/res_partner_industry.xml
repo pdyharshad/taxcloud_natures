@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 Sodexis
+    License OPL-1 (See LICENSE file for full copyright and licensing details). -->
+<odoo>
+    <data noupdate="True">
+        <record id="base.res_partner_industry_I" model="res.partner.industry">
+            <field name="is_taxcloud" eval="True" />
+            <field name="taxcloud_business_type">Accommodation and Food Services</field>
+            <field name="code">AccommodationAndFoodServices</field>
+        </record>
+        <record id="base.res_partner_industry_A" model="res.partner.industry">
+            <field name="is_taxcloud" eval="True" />
+            <field
+                name="taxcloud_business_type"
+            >Agricultural Forestry Fishing and Hunting</field>
+            <field name="code">Agricultural_Forestry_Fishing_Hunting</field>
+        </record>
+        <record id="base.res_partner_industry_F" model="res.partner.industry">
+            <field name="is_taxcloud" eval="True" />
+            <field name="taxcloud_business_type">Construction</field>
+            <field name="code">Construction</field>
+        </record>
+        <record id="base.res_partner_industry_P" model="res.partner.industry">
+            <field name="is_taxcloud" eval="True" />
+            <field
+                name="taxcloud_business_type"
+            >Education and HealthCare Services</field>
+            <field name="code">EducationAndHealthCareServices</field>
+        </record>
+        <record id="base.res_partner_industry_K" model="res.partner.industry">
+            <field name="is_taxcloud" eval="True" />
+            <field name="taxcloud_business_type">Finance and Insurance</field>
+            <field name="code">FinanceAndInsurance</field>
+        </record>
+        <record id="base.res_partner_industry_J" model="res.partner.industry">
+            <field name="is_taxcloud" eval="True" />
+            <field
+                name="taxcloud_business_type"
+            >Information Publishing and Communications</field>
+            <field name="code">Information_PublishingAndCommunications</field>
+        </record>
+        <record id="base.res_partner_industry_C" model="res.partner.industry">
+            <field name="is_taxcloud" eval="True" />
+            <field name="taxcloud_business_type">Manufacturing</field>
+            <field name="code">Manufacturing</field>
+        </record>
+        <record id="base.res_partner_industry_B" model="res.partner.industry">
+            <field name="is_taxcloud" eval="True" />
+            <field name="taxcloud_business_type">Mining</field>
+            <field name="code">Mining</field>
+        </record>
+        <record id="base.res_partner_industry_S" model="res.partner.industry">
+            <field name="is_taxcloud" eval="True" />
+            <field name="taxcloud_business_type">Other</field>
+            <field name="code">Other</field>
+        </record>
+        <record id="base.res_partner_industry_L" model="res.partner.industry">
+            <field name="is_taxcloud" eval="True" />
+            <field name="taxcloud_business_type">Real Estate</field>
+            <field name="code">RealEstate</field>
+        </record>
+        <record id="base.res_partner_industry_H" model="res.partner.industry">
+            <field name="is_taxcloud" eval="True" />
+            <field name="taxcloud_business_type">Transportation and Warehousing</field>
+            <field name="code">TransportationAndWarehousing</field>
+        </record>
+        <record id="base.res_partner_industry_N" model="res.partner.industry">
+            <field name="is_taxcloud" eval="True" />
+            <field name="taxcloud_business_type">Utilities</field>
+            <field name="code">Utilities</field>
+        </record>
+        <record
+            id="res_partner_industry_business_services"
+            model="res.partner.industry"
+        >
+            <field name="name">Business Services</field>
+            <field name="full_name">BUSINESS SERVICES</field>
+            <field name="is_taxcloud" eval="True" />
+            <field name="taxcloud_business_type">Business Services</field>
+            <field name="code">BusinessServices</field>
+        </record>
+        <record id="res_partner_industry_government" model="res.partner.industry">
+            <field name="name">Government</field>
+            <field name="full_name">GOVERNMENT</field>
+            <field name="is_taxcloud" eval="True" />
+            <field name="taxcloud_business_type">Government</field>
+            <field name="code">Government</field>
+        </record>
+        <record
+            id="res_partner_industry_nonprofit_organization"
+            model="res.partner.industry"
+        >
+            <field name="name">Nonprofit Organization</field>
+            <field name="full_name">NONPROFIT ORGANIZATION</field>
+            <field name="is_taxcloud" eval="True" />
+            <field name="taxcloud_business_type">Nonprofit Organization</field>
+            <field name="code">NonprofitOrganization</field>
+        </record>
+        <record id="res_partner_industry_not_a_business" model="res.partner.industry">
+            <field name="name">Not a Business</field>
+            <field name="full_name">NOT A BUSINESS</field>
+            <field name="is_taxcloud" eval="True" />
+            <field name="taxcloud_business_type">Not a Business</field>
+            <field name="code">NotABusiness</field>
+        </record>
+        <record
+            id="res_partner_industry_professional_services"
+            model="res.partner.industry"
+        >
+            <field name="name">Professional Services</field>
+            <field name="full_name">PROFESSIONAL SERVICES</field>
+            <field name="is_taxcloud" eval="True" />
+            <field name="taxcloud_business_type">Professional Services</field>
+            <field name="code">ProfessionalServices</field>
+        </record>
+        <record
+            id="res_partner_industry_rental_and_leasing"
+            model="res.partner.industry"
+        >
+            <field name="name">Rental and Leasing</field>
+            <field name="full_name">RENTAL AND LEASING</field>
+            <field name="is_taxcloud" eval="True" />
+            <field name="taxcloud_business_type">Rental and Leasing</field>
+            <field name="code">RentalAndLeasing</field>
+        </record>
+        <record id="res_partner_industry_retail_trade" model="res.partner.industry">
+            <field name="name">Retail Trade</field>
+            <field name="full_name">RETAIL TRADE</field>
+            <field name="is_taxcloud" eval="True" />
+            <field name="taxcloud_business_type">Retail Trade</field>
+            <field name="code">RetailTrade</field>
+        </record>
+        <record id="res_partner_industry_wholesale_trade" model="res.partner.industry">
+            <field name="name">Wholesale Trade</field>
+            <field name="full_name">WHOLESALE TRADE</field>
+            <field name="is_taxcloud" eval="True" />
+            <field name="taxcloud_business_type">Wholesale Trade</field>
+            <field name="code">WholesaleTrade</field>
+        </record>
+    </data>
+
+</odoo>

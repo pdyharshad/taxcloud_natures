@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 Sodexis
+    License OPL-1 (See LICENSE file for full copyright and licensing details). -->
+<odoo>
+
+    <record id="view_partner_form_inherit" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='vat']" position="before">
+                <field name="tax_number_type" />
+                <field
+                    name="state_of_issue_id"
+                    options="{'no_quick_create':True,'no_create_edit':True}"
+                />
+            </xpath>
+            <xpath expr="//field[@name='industry_id']" position="after">
+                <field name="is_other_services" invisible="True" />
+                <field
+                    name="other_business_type"
+                    invisible="(not is_other_services) or (not is_company)"
+                />
+            </xpath>
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button
+                    name="action_open_exemption_certificate"
+                    icon="fa-list-alt"
+                    class="oe_stat_button"
+                    type="object"
+                >
+                    <div class="o_stat_info">
+                        <span class="o_stat_text">Exemption Certificate</span>
+                    </div>
+                </button>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_partner_property_form_inherit" model="ir.ui.view">
+        <field name="name">res.partner.property.form.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="account.view_partner_property_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//field[@name='property_account_position_id']"
+                position="after"
+            >
+                <field name="first_name" />
+                <field name="last_name" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

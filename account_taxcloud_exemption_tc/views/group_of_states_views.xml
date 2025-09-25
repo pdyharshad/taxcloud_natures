@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 Sodexis
+    License OPL-1 (See LICENSE file for full copyright and licensing details). -->
+<odoo>
+
+        <record id="group_of_states_tree_view" model="ir.ui.view">
+            <field name="name">Group.Of.States.Tree</field>
+            <field name="model">group.of.states</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="name" />
+                </list>
+            </field>
+        </record>
+
+        <record id="group_of_states_form_view" model="ir.ui.view">
+            <field name="name">Group.Of.States.Form</field>
+            <field name="model">group.of.states</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name" />
+                            <field name="country_id" />
+                            <field
+                            name="state_ids"
+                            widget="many2many_tags"
+                            string="States"
+                        />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="group_of_states_action" model="ir.actions.act_window">
+            <field name="name">Group Of States</field>
+            <field name="res_model">group.of.states</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+</odoo>

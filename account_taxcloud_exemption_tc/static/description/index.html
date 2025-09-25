@@ -1,0 +1,222 @@
+<html>
+
+
+<body class="c6 doc-content">
+    <center class="c12"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 122.67px;"><img
+                alt="" src="images/image10.jpg"
+                style="width: 624.00px; height: 122.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></center> <br/>
+    <p class="c23 c7"><span class="c3"></span></p>
+    <h2 class="c27 title" id="h.ajgjjtyt4awz"><span class="c13 c26">TaxCloud Exemption</span></h2>
+    <h5 class="c5" id="h.ckusu2jwsef9"><span class="c1">Description</span></h5>
+    <p class="c2"><span class="c3">This module allows the creation of Exemption Certificates in Odoo and submission to
+            TaxCloud. It is compatible with multi-company environments. Valid exemption certificates are automatically
+            applied to Invoices and Credit notes based on the Delivery Address selected.</span></p>
+    <h5 class="c5" id="h.l54a43k372gq"><span class="c13">Related App</span></h5>
+    <p class="c2"><span class="c8">To use the exemption features on the Sales Order, install the TaxCloud Exemption
+            (Sale) module, which is available in the Odoo Apps Store</span><span class="c11">.</span></p>
+    <p class="c12 c7"><span class="c3"></span></p>
+    <p class="c2"><span class="c8">The main TaxCloud connector app, Account TaxCloud, should also be installed. If it
+            has not been installed yet, please review its documentation.</span></p>
+    <h5 class="c5" id="h.hm1fjke99ho0"><span class="c13">Access Rights</span></h5>
+    <p class="c2"><span class="c8">To configure the Access Rights, navigate to </span><strong><span class="c0">Settings app
+            &nbsp;&#10145; Users</span></strong><span class="c8">&nbsp;and locate the </span><strong><span class="c0">&ldquo;Manage
+            TaxCloud Exemption&rdquo;</span></strong><span class="c3">&nbsp;boolean under the Technical section. </span></p>
+    <p class="c2 c7"><span class="c3"></span></p>
+    <p class="c2"><span class="c3">A user will have the ability to Create, Cancel, and Export Exemptions to TaxCloud if
+            this Boolean is enabled. </span></p>
+    <p class="c2"><span class="c3">Users without this access will be able to view the list of exemptions and use
+            them.</span></p>
+    <p class="c2 c7"><span class="c3"></span></p>
+    <p class="c2"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 330.67px;"><img
+                alt="" src="images/image2.png"
+                style="width: 624.00px; height: 330.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c2 c7"><span class="c3"></span></p>
+    <h5 class="c5" id="h.gjw9qnesm4o3"><span class="c13">Functionality</span></h1>
+    <p class="c2"><span class="c3">On the contact form, some new fields have been added to be used on the Exemption
+            Certificates.</span></p>
+    <p class="c2 c7"><span class="c3"></span></p>
+    <p class="c2"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 438.67px;"><img
+                alt="" src="images/image8.png"
+                style="width: 624.00px; height: 438.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c2 c7"><span class="c3"></span></p>
+    <p class="c2"><span class="c8">The</span><strong><span class="c0">&nbsp;&ldquo;Tax Number Type&rdquo;</span></strong><span
+            class="c8">&nbsp;field is used to indicate the type of Tax ID, and the </span><strong><span class="c0">&ldquo;State
+            of Issue&rdquo;</span></strong><span class="c3">&nbsp;is used to specify where the Tax ID was issued.</span></p>
+    <p class="c2 c7"><span class="c3"></span></p>
+    <p class="c2"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 623.50px; height: 384.86px;"><img
+                alt="" src="images/image4.png"
+                style="width: 729.95px; height: 384.86px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c2 c7"><span class="c3"></span></p>
+    <p class="c2"><span class="c8">On the Sales &amp; Purchase tab, if the </span><strong><span class="c0">&ldquo;TaxCloud First
+            Name&rdquo;</span></strong><strong><span class="c8">&nbsp;and </span><span class="c0">&quot;TaxCloud Last
+            Name&quot;</span></strong><span class="c3">&nbsp;fields are filled, then the Name field will be computed using the
+            First Name and Last Name. However, the Name in the Contact can still be changed. When sending the
+            information to TaxCloud to create the Exemption Certificate, it will use the TaxCloud First Name and Last
+            Name if it is available, otherwise, the Name will be split and used as a First Name and Last Name.</span>
+    </p>
+    <p class="c2 c7"><span class="c3"></span></p>
+    <p class="c2"><span class="c8">The Odoo-based</span><strong><span class="c0">&nbsp;Industry</span></strong><span
+            class="c8">&nbsp;field is used for the TaxCloud Business Type by adding </span><strong><span class="c0">&ldquo;Used
+            By TaxCloud&rdquo;</span></strong><span class="c8">&nbsp;and</span><strong><span class="c0">&nbsp;&ldquo;TaxCloud Business
+            Type&rdquo; </span></strong><span class="c8">to the Industry menu to indicate that the industry is applicable for the
+            TaxCloud Business Type. These fields are not editable and will be updated during the installation of the
+            module. When the Industry on the contact is set to Other Service, a new field will be displayed for
+            specifying the</span><strong><span class="c0">&nbsp;Other Business Type</span></strong><span class="c3">&nbsp;if the desired
+            business type is not available among the predefined Business types.</span></p>
+    <p class="c2 c7"><span class="c3"></span></p>
+    <p class="c2"><span class="c8">A new smart button has been included to list the </span><strong><span class="c0">Exemption
+            Certificates</span></strong><span class="c3">&nbsp;for the customer and all its related Contacts. On the related
+            contacts, the smart button will list its exemptions and the parent company&#39;s exemptions.</span></p>
+    <p class="c2 c7"><span class="c3"></span></p>
+    <h5 class="c5" id="h.kqe1rfp5poc1"><span class="c1">Exemptions</span></h5>
+    <p class="c2"><span class="c8">To create a new Exemption, navigate to the</span><strong><span class="c0">&nbsp;Accounting
+        </span></strong><span class="c8">app, and it can be seen that a new sub-menu </span><strong><span
+            class="c0">&ldquo;Exemptions&rdquo;</span></strong><span class="c3">&nbsp; is added under the Customers menu.</span>
+    </p>
+    <p class="c2 c7"><span class="c3"></span></p>
+    <p class="c2"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 448.00px;"><img
+                alt="" src="images/image5.png"
+                style="width: 624.00px; height: 448.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c2 c7"><span class="c3"></span></p>
+    <p class="c2"><span class="c8">Select the Customer, it will list the customers based on the company selected on the
+            record. If the </span><strong><span class="c0">Tax Number Type</span><span class="c8">, </span><span class="c0">Tax
+            ID</span><span class="c8">, </span><span class="c0">State of Issue</span><span class="c8">,</strong> and </span><strong><span
+            class="c0">Business Type</span></strong><span class="c3">&nbsp;are entered on the selected customer, these values
+            will be automatically populated. However, these values can still be edited manually.</span></p>
+    <p class="c2"><span class="c8">When the </span><strong><span class="c0">Business Type</span></strong><span class="c8">&nbsp;field is
+            set to </span><strong><span class="c0">Other Services</span></strong><span class="c8">, a new </span><strong><span class="c0">Other
+            Business Type</span></strong><span class="c3">&nbsp;field becomes visible for entering the other business
+            type.</span></p>
+    <p class="c2 c7"><span class="c3"></span></p>
+    <p class="c2"><span class="c8">The </span><strong><span class="c0">Company</span></strong><span class="c3">&nbsp;field automatically
+            defaults to the current company selected by the user. &nbsp;The user can select a different company if
+            required. The Exemption certificate will be created in the TaxCloud store used for that company. </span></p>
+    <h5 class="c17" id="h.gz4rx4hy6n5e"><span class="c16 c13 c19">Exemption Certificate Information: </span></h5>
+    <p class="c2"><span class="c8">The Exemption validity is based on the </span><strong><span class="c0">&ldquo;Start
+            Date&rdquo;</span></strong><span class="c8">&nbsp;and </span><strong><strong><span class="c0">&ldquo;Expiration
+            Date&rdquo;</span></strong></strong><span class="c8">&nbsp;set on the Exemption. The </span><strong><span class="c0">&ldquo;Expiration
+            Date&rdquo;</span></strong><span class="c3">&nbsp;is not a required field.</span></p>
+    <p class="c7 c12"><span class="c3"></span></p>
+    <p class="c2"><span class="c8">If the </span><strong><span class="c0">Expiration Date</span></strong><span class="c8">&nbsp;is set
+            before today&rsquo;s date, then the certificate is considered Expired and is not used in any of the
+            Invoices. An &ldquo;</span><strong><span class="c0">EXPIRED&rdquo;</span></strong><span class="c3">&nbsp;banner is added at
+            the top right corner when the Exemption expires.</span></p>
+    <p class="c2 c7"><span class="c3"></span></p>
+    <p class="c2"><strong><span class="c0">Certificate Reason</span></strong><span class="c8">&nbsp;is used to fill the reason for the
+            exemption certificate. If the Certificate Reason is set to</span><strong><span class="c0">&nbsp;Other</span></strong><span
+            class="c8">, a new field </span><strong><span class="c0">Other Reason</span></strong><span class="c3">&nbsp;is
+            displayed.</span></p>
+    <h5 class="c17" id="h.a972db4thgip"><span class="c13">Exemption State and Its Details: </span></h5>
+    <p class="c2"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 448.00px;"><img
+                alt="" src="images/image6.png"
+                style="width: 624.00px; height: 448.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c2"><strong><span class="c0">Reason for Exemption</span></strong><span class="c8">&nbsp;and </span><strong><span
+            class="c0">&nbsp;ID Number</span></strong><span class="c3">&nbsp;are used to specify the default reason and ID on the
+            exemption lines.</span></p>
+    <p class="c2 c7"><span class="c3"></span></p>
+    <p class="c2"><span class="c8">The </span><strong><span class="c0">Group of States</span></strong><span class="c3">&nbsp;feature
+            allows users to add multiple states at once with a predefined set of states in the exemption, rather than
+            manually adding each of the states separately.</span></p>
+    <p class="c2 c7"><span class="c3"></span></p>
+    <p class="c2"><span class="c3">To define the Group of States, navigate to Accounting app &#10145; Configuration
+            &#10145; TaxCloud Exemption.</span></p>
+    <ul class="c22 lst-kix_d1dbe5txbi2o-0 start">
+        <li class="c2 c10 li-bullet-0"><strong><span class="c0">Name</span></strong><span class="c3">: &nbsp;A recognizable name for the
+                group of states. </span></li>
+        <li class="c2 c10 li-bullet-0"><strong><span class="c0">Country</span></strong><span class="c8">: Defaults to the </span><strong><span
+                class="c0">United States</span></strong><span class="c3">. </span></li>
+        <li class="c2 c10 li-bullet-0"><strong><span class="c0">States</span></strong><span class="c8">: Displays a list of the selected
+                country&rsquo;s states with the option to add multiple states from the list view</span><span
+                class="c11">. </span></li>
+    </ul>
+    <p class="c2 c7"><span class="c11"></span></p>
+    <p class="c2"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 138.67px;"><img
+                alt="" src="images/image3.png"
+                style="width: 624.00px; height: 138.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c2 c7"><span class="c3"></span></p>
+    <p class="c2"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 305.33px;"><img
+                alt="" src="images/image7.png"
+                style="width: 624.00px; height: 305.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c2 c7"><span class="c3"></span></p>
+    <p class="c2"><strong><span class="c0">States</span></strong><span class="c8">&nbsp;will list only the States in the United States.
+            If a Group of States is selected then the states from that group will be added. Additionally, </span><span
+            class="c8">a State</span><span class="c3">&nbsp;can be added manually to the list. </span></p>
+    <p class="c2 c7"><span class="c3"></span></p>
+    <p class="c2"><strong><span class="c0">Exemption Lines</span></strong><span class="c3">&nbsp;are created automatically when the
+            States are selected, the fields on the exemption lines can be edited manually if needed.</span></p>
+    <p class="c2 c7"><span class="c3"></span></p>
+    <p class="c2"><span class="c18 c8">Once all the data is filled, click the</span><strong><span class="c0 c18">&nbsp;Export
+            Exemption</span></strong><span class="c18 c8">&nbsp;button to send the information to TaxCloud and obtain the
+            certificate ID. After that, the state is changed to Exported and the fields are not editable anymore.
+            &nbsp;The </span><strong><span class="c0 c18">Cancel option</span></strong><span class="c3 c18">&nbsp;will cancel the
+            certificate ID in TaxCloud, and the exemption is not valid anymore. If an error occurs during Export or
+            Cancel, an error message will be logged in Chatter.</span></p>
+    <p class="c2 c7"><span class="c3 c18"></span></p>
+    <p class="c2"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 296.00px;"><img
+                alt="" src="images/image11.png"
+                style="width: 624.00px; height: 296.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c2 c7"><span class="c3 c24"></span></p>
+    <p class="c2"><span class="c8">The smart button</span><strong><span class="c0">&nbsp;&ldquo;Invoices&rdquo; </span></strong><span
+            class="c3">lists all the Invoices associated with the Exemptions. </span></p>
+    <h5 class="c17" id="h.r09bgjpuol2e"><span class="c16 c19 c13">Invoices</span></h5>
+    <p class="c2"><span class="c8">At the time of posting, TaxCloud rates are used on an invoice or credit note if the
+            proper fiscal position is selected, by default it is named </span><strong><span class="c16 c0">&quot;Automatic Tax
+            Mapping (TaxCloud)&rdquo;.</span></strong></p>
+    <p class="c2 c7"><span class="c16 c0"></span></p>
+    <p class="c2"><span class="c8">An exemption associated with the Delivery Address or its parent Company will be
+            automatically applied to the invoice if valid at the time of the posting. The validity of the exemption will
+            be checked based on the Invoice Date. A &nbsp;message </span><strong><span class="c0">&ldquo;Exemption is
+            applied&rdquo;</span></strong><span class="c3">&nbsp;appears on the header.</span></p>
+    <p class="c2 c7"><span class="c3"></span></p>
+    <p class="c2"><span class="c8">The</span><strong><span class="c0">&nbsp;Exemption</span></strong><span class="c8">&nbsp;applied is
+            shown under the </span><strong><span class="c0">Other Info</span></strong><span class="c8">&nbsp;tab. The </span><strong><span
+            class="c0">Don&#39;t Apply Exemption</span></strong><span class="c3">&nbsp;Boolean can be used if the exemption does
+            not need to be applied.</span></p>
+    <p class="c2 c7"><span class="c3"></span></p>
+    <p class="c2"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 464.00px;"><img
+                alt="" src="images/image1.png"
+                style="width: 624.00px; height: 464.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c2 c7"><span class="c3"></span></p>
+    <p class="c2"><span class="c18 c8">If a Credit Note is created from an invoice, it will use the Exemption from the
+            Invoice, regardless of the exemption&#39;s validity at that time</span><span class="c4">.</span></p>
+    <p class="c2 c7"><span class="c4"></span></p>
+    <p class="c2"><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 456.00px;"><img
+                alt="" src="images/image9.png"
+                style="width: 624.00px; height: 456.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+                title=""></span></p>
+    <p class="c12"><strong><span class="c0">Document Version:</span></strong><span class="c3">&nbsp;1.0</span></p><p class="c12 c7"><span class="c3"></span></p>
+    <h2 class="c15" id="h.3znysh7"><span class="c1">Credits</span></h2>
+    <h5 class="c18 c20" id="h.2et92p0"><span class="c16 c19 c13">Contributors</span></h5>
+    <p class="c30"><span class="c21 c8 c29">For additional information or inquiries regarding TaxCloud, feel free to
+            reach out to us at</span></p>
+    <p class="c12"><span class="c8 c21">Sodexis &lt;&#128231;</span><span class="c8 c31"><a class="c25"
+                href="mailto:taxcloud@sodexis.com">taxcloud@sodexis.com</a></span><span class="c21 c8">&gt; or visit our
+            website at &lt;&#127760;</span><span class="c8 c9"><a class="c25"
+                href="https://www.google.com/url?q=http://sodexis.com/taxcloud&amp;sa=D&amp;source=editors&amp;ust=1741336878052581&amp;usg=AOvVaw3tpETUdxoV8Isbxl6IQs20">sodexis.com/taxcloud</a></span><span
+            class="c3">&gt;</span></p>
+    <p class="c7 c23"><span class="c3"></span></p>
+    <p class="c15"><span class="c8">This module is maintained by Sodexis.</span></p>
+</body>
+
+</html>

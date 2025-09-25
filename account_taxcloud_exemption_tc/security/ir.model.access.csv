@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_purchaser_exemption_reason,purchaser.exemption.reason,model_purchaser_exemption_reason,base.group_user,1,1,1,1
+access_group_of_states,group.of.states,model_group_of_states,base.group_user,1,1,1,1
+access_taxcloud_exemption_access_user,taxcloud.exemption,model_taxcloud_exemption,base.group_user,1,0,0,0
+access_taxcloud_exemption_access_manager,taxcloud.exemption,model_taxcloud_exemption,account_taxcloud_exemption_tc.group_manage_taxcloud_exemption,1,1,1,0
+access_taxcloud_exemption_line,taxcloud.exemption.line,model_taxcloud_exemption_line,base.group_user,1,1,1,1

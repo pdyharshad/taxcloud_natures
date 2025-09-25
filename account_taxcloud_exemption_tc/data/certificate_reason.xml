@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 Sodexis
+    License OPL-1 (See LICENSE file for full copyright and licensing details). -->
+<odoo>
+    <data noupdate="True">
+        <record
+            id="purchaser_exemption_reason_agricultural_production"
+            model="purchaser.exemption.reason"
+        >
+            <field name="name">Agricultural Production</field>
+            <field name="code">AgriculturalProduction</field>
+        </record>
+        <record
+            id="purchaser_exemption_reason_charitabl_organization"
+            model="purchaser.exemption.reason"
+        >
+            <field name="name">Charitable Organization</field>
+            <field name="code">CharitableOrganization</field>
+        </record>
+        <record
+            id="purchaser_exemption_reason_direct_mail"
+            model="purchaser.exemption.reason"
+        >
+            <field name="name">Direct Mail</field>
+            <field name="code">DirectMail</field>
+        </record>
+        <record
+            id="purchaser_exemption_reason_direct_pay_permit"
+            model="purchaser.exemption.reason"
+        >
+            <field name="name">Direct Pay Permit</field>
+            <field name="code">DirectPayPermit</field>
+        </record>
+        <record
+            id="purchaser_exemption_reason_educational_organization"
+            model="purchaser.exemption.reason"
+        >
+            <field name="name">Educational Organization</field>
+            <field name="code">EducationalOrganization</field>
+        </record>
+        <record
+            id="purchaser_exemption_reason_federal_government_department"
+            model="purchaser.exemption.reason"
+        >
+            <field name="name">Federal Government Department</field>
+            <field name="code">FederalGovernmentDepartment</field>
+        </record>
+        <record
+            id="purchaser_exemption_reason_foreign_diplomat"
+            model="purchaser.exemption.reason"
+        >
+            <field name="name">Foreign Diplomat</field>
+            <field name="code">ForeignDiplomat</field>
+        </record>
+        <record
+            id="purchaser_exemption_reason_industrial_production_or_manufacturing"
+            model="purchaser.exemption.reason"
+        >
+            <field name="name">Industrial Production or Manufacturing</field>
+            <field name="code">IndustrialProductionOrManufacturing</field>
+        </record>
+        <record
+            id="purchaser_exemption_reason_other"
+            model="purchaser.exemption.reason"
+        >
+            <field name="name">Other</field>
+            <field name="other_reason" eval="True" />
+            <field name="code">Other</field>
+        </record>
+        <record
+            id="purchaser_exemption_reason_religious_organization"
+            model="purchaser.exemption.reason"
+        >
+            <field name="name">Religious Organization</field>
+            <field name="code">ReligiousOrganization</field>
+        </record>
+        <record
+            id="purchaser_exemption_reason_resale"
+            model="purchaser.exemption.reason"
+        >
+            <field name="name">Resale</field>
+            <field name="code">Resale</field>
+        </record>
+        <record
+            id="purchaser_exemption_reason_state_or_local_government_name"
+            model="purchaser.exemption.reason"
+        >
+            <field name="name">State or Local Government Name</field>
+            <field name="code">StateOrLocalGovernmentName</field>
+        </record>
+        <record
+            id="purchaser_exemption_reason_tribal_government_name"
+            model="purchaser.exemption.reason"
+        >
+            <field name="name">Tribal Government Name</field>
+            <field name="code">TribalGovernmentName</field>
+        </record>
+    </data>
+
+</odoo>

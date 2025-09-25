@@ -1,0 +1,244 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2024 Sodexis License OPL-1 (See LICENSE file for full copyright and licensing details). -->
+<odoo>
+
+    <record id="taxcloud_exemption_form_view" model="ir.ui.view">
+        <field name="name">taxcloud.exemption.form</field>
+        <field name="model">taxcloud.exemption</field>
+        <field name="arch" type="xml">
+            <form string="Taxcloud Exemption">
+            <header>
+                <button
+                        name="action_export_exemption"
+                        string="Export Exemption"
+                        type="object"
+                        invisible="state != 'draft'"
+                        class="btn-primary"
+                        groups="account_taxcloud_exemption_tc.group_manage_taxcloud_exemption"
+                    />
+                <button
+                        name="action_cancel"
+                        type="object"
+                        string="Cancel"
+                        invisible="state != 'export'"
+                        groups="account_taxcloud_exemption_tc.group_manage_taxcloud_exemption"
+                    />
+                <field
+                        name="state"
+                        widget="statusbar"
+                        statusbar_visible="draft,export,cancel"
+                    />
+            </header>
+            <sheet>
+                <div class="oe_button_box" name="button_box">
+                    <button
+                            class="oe_stat_button"
+                            type="object"
+                            name="action_view_sale_order"
+                            icon="fa-usd"
+                            invisible="sale_order_count == 0"
+                        >
+                        <field
+                                string="Sale Orders"
+                                name="sale_order_count"
+                                widget="statinfo"
+                            />
+                    </button>
+                    <button
+                            class="oe_stat_button"
+                            type="object"
+                            name="action_view_invoice"
+                            icon="fa-pencil-square-o"
+                            invisible="invoice_count == 0"
+                        >
+                        <field
+                                string="Invoices"
+                                name="invoice_count"
+                                widget="statinfo"
+                            />
+                    </button>
+                </div>
+                <widget
+                        name="web_ribbon"
+                        title="Expired"
+                        bg_color="text-bg-danger"
+                        invisible="not is_expired"
+                    />
+                <div class="oe_title">
+                    <h1>
+                        <field name="name" readonly="1" />
+                    </h1>
+                </div>
+                <group>
+                    <group>
+                        <field
+                                name="certificate_id"
+                                readonly="1"
+                                invisible="not certificate_id"
+                            />
+                        <field
+                                name="partner_id"
+                                readonly="state != 'draft'"
+                                required="1"
+                                context="{'res_partner_search_mode': 'customer', 'show_address': 1, 'show_vat': True}"
+                            />
+                        <field
+                                name="tax_number_type"
+                                required="1"
+                                readonly="state != 'draft'"
+                            />
+                        <field name="vat" required="1" readonly="state != 'draft'" />
+                        <field
+                                name="state_of_issue_id"
+                                required="1"
+                                readonly="state != 'draft'"
+                                options="{'no_quick_create':True,'no_create_edit':True}"
+                            />
+                        <field
+                                name="industry_id"
+                                domain="[('is_taxcloud','=',True)]"
+                                readonly="state != 'draft'"
+                                required="1"
+                                options="{'no_quick_create':True,'no_create_edit':True}"
+                            />
+                        <field name="is_other_services" invisible="1" />
+                        <field
+                                name="other_business_type"
+                                invisible="not is_other_services"
+                                readonly="state != 'draft'"
+                                required="is_other_services"
+                            />
+                        <field
+                                name="company_id"
+                                options="{'no_create': True}"
+                                readonly="state != 'draft'"
+                                required="1"
+                            />
+                    </group>
+                    <group string="Exemption Certificate Information">
+                        <field
+                                name="start_date"
+                                required="1"
+                                readonly="state != 'draft'"
+                            />
+                        <field name="is_expired" invisible="1" />
+                        <field name="expiration_date" readonly="state != 'draft'" />
+                        <field
+                                name="creation_date"
+                                required="1"
+                                readonly="state != 'draft'"
+                            />
+                        <field
+                                name="certificate_reason"
+                                required="1"
+                                readonly="state != 'draft'"
+                                options="{'no_quick_create':True,'no_create_edit':True}"
+                            />
+                        <field
+                                name="is_other_reason"
+                                invisible="1"
+                                readonly="state != 'draft'"
+                            />
+                        <field
+                                name="other_reason"
+                                invisible="not is_other_reason"
+                                required="is_other_reason"
+                                readonly="state != 'draft'"
+                            />
+
+                    </group>
+                </group>
+                <group string="Exemption State and its Details">
+                    <field
+                            name="reason_for_exemption"
+                            readonly="state != 'draft'"
+                            required="1"
+                        />
+                    <field name="id_number" readonly="state != 'draft'" />
+                    <field
+                            name="group_of_state_id"
+                            readonly="state != 'draft'"
+                            options="{'no_quick_create':True,'no_create_edit':True}"
+                        />
+                    <field
+                            name="state_ids"
+                            widget="many2many_tags"
+                            readonly="state != 'draft'"
+                            required="1"
+                            options="{'no_quick_create':True,'no_create_edit':True}"
+                        />
+                </group>
+                <notebook>
+                    <page string="Exemption Lines">
+                        <field
+                                name="taxcloud_exemption_line_ids"
+                                readonly="state != 'draft'"
+                                nolabel="1"
+                            >
+                            <list editable="bottom" create="0">
+                                <field name="state_id" required="1" />
+                                <field name="state_code" required="1" />
+                                <field name="reason_for_exemption" required="1" />
+                                <field name="id_number" />
+                            </list>
+                        </field>
+                    </page>
+                </notebook>
+
+            </sheet>
+            <chatter />
+            </form>
+        </field>
+    </record>
+
+    <record id="taxcloud_exemption_tree_view" model="ir.ui.view">
+        <field name="name">taxcloud.exemption.tree</field>
+        <field name="model">taxcloud.exemption</field>
+        <field name="arch" type="xml">
+            <list>
+		<header>
+                    <button
+                    name="export_exemption"
+                    string="Export Exemption"
+                    type="object"
+                    class="btn-primary"
+                    groups="account_taxcloud_exemption_tc.group_manage_taxcloud_exemption"/>
+                </header>
+                <field name="name" />
+                <field name="certificate_id" />
+                <field name="state" />
+            </list>
+        </field>
+    </record>
+
+    <record id="taxcloud_exemption_search_view" model="ir.ui.view">
+        <field name="name">taxcloud.exemption.search</field>
+        <field name="model">taxcloud.exemption</field>
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <search string="Search Exemption">
+                <field name="partner_id" string="Customer" />
+                <field name="certificate_id" string="Certificate ID" />
+                <filter
+                    name="active"
+                    string="Active Exemption"
+                    domain="['|', ('expiration_date','&gt;=', context_today()), ('expiration_date','=', False), ('state','!=','cancel')]"
+                />
+                <filter
+                    name="exemptions_to_export"
+                    string="Exemptions to Export"
+                    domain="[('state','=','draft')]"
+                />
+            </search>
+        </field>
+    </record>
+
+    <record id="action_taxcloud_exemption" model="ir.actions.act_window">
+        <field name="name">Exemptions</field>
+        <field name="res_model">taxcloud.exemption</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="taxcloud_exemption_search_view" />
+        <field name="context">{'search_default_active': 1}</field>
+    </record>
+
+</odoo>
