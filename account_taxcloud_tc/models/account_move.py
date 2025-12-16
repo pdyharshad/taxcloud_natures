@@ -268,7 +268,7 @@ class AccountMove(models.Model):
                     request.set_invoice_items_detail(invoice)
                     origin_invoice = invoice.reversed_entry_id
                     if origin_invoice:
-                        request.get_taxcloud_returned(origin_invoice, self.invoice_date)
+                        request.get_taxcloud_returned(origin_invoice, invoice.invoice_date)
                     else:
                         _logger.warning(
                             """The source document on the refund %i is not valid"""
